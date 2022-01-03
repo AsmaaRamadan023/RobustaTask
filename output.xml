@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20220103 23:30:55.471" rpa="false">
+<suite id="s1" name="RobustaTask" source="C:\Users\Asmaa\eclipse-workspace\RobustaTask">
+<suite id="s1-s1" name="Tests" source="C:\Users\Asmaa\eclipse-workspace\RobustaTask\Tests">
+<suite id="s1-s1-s1" name="RegisterTest" source="C:\Users\Asmaa\eclipse-workspace\RobustaTask\Tests\RegisterTest.robot">
+<kw name="starTest" library="TestBase" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Driver}</arg>
+</arguments>
+<msg timestamp="20220103 23:30:56.052" level="INFO">Opening browser 'chrome' to base url 'https://www.ta3limy.com/'.</msg>
+<status status="PASS" starttime="20220103 23:30:56.051" endtime="20220103 23:31:02.420"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220103 23:31:02.423" endtime="20220103 23:31:02.592"></status>
+</kw>
+<status status="PASS" starttime="20220103 23:30:56.051" endtime="20220103 23:31:02.592"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Check Registration as a parent">
+<kw name="scroll in page to login" library="HomePage">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+</arguments>
+<msg timestamp="20220103 23:31:02.599" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220103 23:31:02.598" endtime="20220103 23:31:02.611"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.ta3limy.com/register</arg>
+</arguments>
+<msg timestamp="20220103 23:31:02.612" level="INFO">Opening url 'https://www.ta3limy.com/register'</msg>
+<status status="PASS" starttime="20220103 23:31:02.612" endtime="20220103 23:31:17.958"></status>
+</kw>
+<status status="PASS" starttime="20220103 23:31:02.595" endtime="20220103 23:31:17.959"></status>
+</kw>
+<kw name="Register as Parent" library="RegisterPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${parentCheckBox}</arg>
+<arg>20</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220103 23:31:38.698" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220103 23:31:38.175" endtime="20220103 23:31:38.699"></status>
+</kw>
+<msg timestamp="20220103 23:31:38.703" level="FAIL">Element 'xpath:/html/body/div[8]/div/section/div[2]/div[2]/form/fieldset/div/div[1]/input' not visible after 20 seconds.</msg>
+<status status="FAIL" starttime="20220103 23:31:17.963" endtime="20220103 23:31:38.703"></status>
+</kw>
+<status status="FAIL" starttime="20220103 23:31:17.960" endtime="20220103 23:31:38.703"></status>
+</kw>
+<status status="FAIL" starttime="20220103 23:31:02.593" endtime="20220103 23:31:38.705" critical="yes">Element 'xpath:/html/body/div[8]/div/section/div[2]/div[2]/form/fieldset/div/div[1]/input' not visible after 20 seconds.</status>
+</test>
+<kw name="endTest" library="TestBase" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220103 23:31:38.708" endtime="20220103 23:31:40.887"></status>
+</kw>
+<status status="PASS" starttime="20220103 23:31:38.707" endtime="20220103 23:31:40.887"></status>
+</kw>
+<status status="FAIL" starttime="20220103 23:30:55.603" endtime="20220103 23:31:40.887"></status>
+</suite>
+<status status="FAIL" starttime="20220103 23:30:55.597" endtime="20220103 23:31:40.891"></status>
+</suite>
+<status status="FAIL" starttime="20220103 23:30:55.550" endtime="20220103 23:31:40.894"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="RobustaTask">RobustaTask</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Tests">RobustaTask.Tests</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="RegisterTest">RobustaTask.Tests.RegisterTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
